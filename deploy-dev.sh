@@ -1,4 +1,3 @@
-#!/bin/bash
 COLOR_G="\x1b[0;32m" #绿色
 COLOR_R="\x1b[1;31m" #红色
 RESET="\x1b[0m"
@@ -22,6 +21,8 @@ echo Deploy Project
 # docker-compose up -d --force-recreate --build
 
 # 获取最新版代码
+git add .
+git commit -m '666'
 git pull
 myexit $?
 echo -e $MSG_OK

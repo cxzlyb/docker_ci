@@ -7,7 +7,7 @@
 
             "exclude": [
                 "node_modules/**",
-                ".git/**",
+                // ".git/**",
                 ".vscode/**",
                 "**/node_modules/**",
             ],

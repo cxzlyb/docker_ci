@@ -40,7 +40,7 @@ handler.on('push', function (event) {
         event.payload.ref);
         // 分支判断
         if(event.payload.ref === 'refs/heads/master'){
-            console.log('deploy master..')
+            console.log('***deploy master..')
             run_cmd('sh', ['./deploy-dev.sh'], function(text){ console.log(text) });
 
         }

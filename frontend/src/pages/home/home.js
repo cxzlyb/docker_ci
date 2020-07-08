@@ -82,7 +82,7 @@ export default class Home extends Component {
     console.log(this.state)
     return (
       <View className='index'>
-        {this.state.isH5?<AtNavBar title="开课吧1112" ></AtNavBar>:null}
+        {this.state.isH5?<AtNavBar title="开课吧" ></AtNavBar>:null}
         <Swiper
           className='swiper-container'
           indicatorActiveColor='#e93b3d'
@@ -116,7 +116,7 @@ export default class Home extends Component {
               </View>
               <View className='at-col at-col-7'>
 
-              <View>已有00{item.solded}人购买</View>
+              <View>已有{item.solded}人购买</View>
               <View>
                 <AtBadge value={item.tag} />
 

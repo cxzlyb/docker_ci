@@ -116,7 +116,7 @@ export default class Home extends Component {
               </View>
               <View className='at-col at-col-7'>
 
-              <View>已有{item.solded}人购买0</View>
+              <View>已有{item.solded}人购买00</View>
               <View>
                 <AtBadge value={item.tag} />
 

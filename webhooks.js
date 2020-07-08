@@ -41,8 +41,11 @@ handler.on('push', function (event) {
         // 分支判断
         if(event.payload.ref === 'refs/heads/master'){
             console.log('***deploy master..')
-            run_cmd('sh', ['./deploy-dev.sh'], function(text){ console.log(text) });
-
+            try{
+                run_cmd('sh', ['./deploy-dev.sh'], function(text){ console.log(text) });
+            }catch(err){
+                console.log(err)
+            }
         }
 })
 

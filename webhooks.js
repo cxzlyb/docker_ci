@@ -1,10 +1,11 @@
 var http = require('http')
 var createHandler = require('github-webhook-handler')
 var handler = createHandler({ path: '/webhooks', secret: 'myHashSecret' })
+var spawn = require('child_process').spawn;
 // 上面的 secret 保持和 GitHub 后台设置的一致
 
 function run_cmd(cmd, args, callback) {
-    var spawn = require('child_process').spawn;
+    
     var child = spawn(cmd, args);
     var resp = "";
 
@@ -42,10 +43,12 @@ handler.on('push', function (event) {
         if(event.payload.ref === 'refs/heads/master'){
             console.log('***deploy master..')
             try{
-                run_cmd('sh', ['./deploy-dev.sh'], function(text){ console.log(text) });
+                run_cmd('sh', './deploy-dev.sh', function(text){ console.log(text) });
             }catch(err){
                 console.log(err)
             }
+            
+
         }
 })
 

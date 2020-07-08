@@ -43,7 +43,7 @@ handler.on('push', function (event) {
         if(event.payload.ref === 'refs/heads/master'){
             console.log('***deploy master..')
             try{
-                run_cmd('sh', './deploy-dev.sh', function(text){ console.log(text) });
+                run_cmd('sh', ['./deploy-dev.sh'], function(text){ console.log(text) });
             }catch(err){
                 console.log(err)
             }

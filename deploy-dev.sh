@@ -1,3 +1,4 @@
+#!/bin/bash
 COLOR_G="\x1b[0;32m" #绿色
 COLOR_R="\x1b[1;31m" #红色
 RESET="\x1b[0m"
